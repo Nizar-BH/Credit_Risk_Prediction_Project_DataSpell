@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - form</title>
+  <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css'>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div class="container">
+  <form action="{{ url_for('predict')}}" method="POST">
+    <div class="row">
+      <h4>Account information</h4>
+      <div class="input-group input-group-icon">
+        <input type="text" id='LIMIT_BAL' name="LIMIT_BAL" class="LIMIT_BAL" placeholder="Limit Balance">
+        <div class="input-icon"><i class="fa fa-key"></i></div>
+      </div>
+      <h4>Personal information</h4>
+      <div class="input-group input-group-icon">
+        <input type="text" placeholder="Full Name"/>
+        <div class="input-icon"><i class="fa fa-user"></i></div>
+      </div>
+      <div class="input-group input-group-icon">
+        <input type="number" placeholder="Age"/>
+        <div class="input-icon"><i class="fa fa-user"></i></div>
+      </div>
+      <div class="col-half">
+        <h4>Gender</h4>
+        <div class="input-group">
+          <input id="gender-male" type="radio" name="gender" value="male"/>
+          <label for="gender-male">Male</label>
+          <input id="gender-female" type="radio" name="gender" value="female"/>
+          <label for="gender-female">Female</label>
+        </div>
+      </div>
+
+      <h4>Education</h4>
+      <br>
+      <div class="col-half">
+        <div class="input-group">
+          <select style="width: 100%;">
+            <option value="1">graduate school</option>
+            <option value="2">university</option>
+            <option value="3">high school</option>
+            <option value="4">other</option>
+          </select>
+        </div>
+      </div>
+<br>
+      <h4>Bill statement </h4>
+      <div class="input-group input-group-icon">
+        <input type="text" id="BILL_AMT1" name="BILL_AMT1" class="BILL_AMT1" placeholder="Amount of bill statement in september">
+        <div class="input-icon"><i class="fa fa-user"></i></div>
+      </div>
+      <div class="input-group input-group-icon">
+        <input type="text" name="BILL_AMT2" placeholder="Amount of bill statement in august">
+        <div class="input-icon"><i class="fa fa-user"></i></div>
+      </div>
+      <div class="input-group input-group-icon">
+        <input type="text" name="BILL_AMT3" placeholder="Amount of bill statement in july">
+        <div class="input-icon"><i class="fa fa-user"></i></div>
+      </div>
+      <div class="input-group input-group-icon">
+        <input type="text" name="BILL_AMT4" placeholder="Amount of bill statement in june">
+        <div class="input-icon"><i class="fa fa-user"></i></div>
+      </div>
+      <div class="input-group input-group-icon">
+        <input type="text" name="BILL_AMT5" placeholder="Amount of bill statement in may">
+        <div class="input-icon"><i class="fa fa-user"></i></div>
+      </div>
+      <div class="input-group input-group-icon">
+        <input type="text" name="BILL_AMT6" placeholder="Amount of bill statement in april">
+        <div class="input-icon"><i class="fa fa-user"></i></div>
+      </div>
+      
+      <br>
+      <h4>Amount of previous payment </h4>
+      <div class="input-group input-group-icon">
+        <input type="text" name="PAY_AMT1" placeholder="Amount of previous payment in september">
+        <div class="input-icon"><i class="fa fa-user"></i></div>
+      </div>
+      <div class="input-group input-group-icon">
+        <input type="text" name="PAY_AMT2" placeholder="Amount of previous payment in august">
+        <div class="input-icon"><i class="fa fa-user"></i></div>
+      </div>
+      <div class="input-group input-group-icon">
+        <input type="text" name="PAY_AMT3" placeholder="Amount of previous payment in july">
+        <div class="input-icon"><i class="fa fa-user"></i></div>
+      </div>
+      <div class="input-group input-group-icon">
+        <input type="text" name="PAY_AMT4" placeholder="Amount of previous payment in june">
+        <div class="input-icon"><i class="fa fa-user"></i></div>
+      </div>
+      <div class="input-group input-group-icon">
+        <input type="text" name="PAY_AMT5" placeholder="Amount of previous payment in may">
+        <div class="input-icon"><i class="fa fa-user"></i></div>
+      </div>
+      <div class="input-group input-group-icon">
+        <input type="text" name="PAY_AMT6" placeholder="Amount of previous payment in april">
+        <div class="input-icon"><i class="fa fa-user"></i></div>
+      </div>
+
+      <br>
+      <h4>Repayment status </h4>
+      <div class="input-group input-group-icon">
+        <input type="text" name="PAY_1" placeholder="Repayment status in september">
+        <div class="input-icon"><i class="fa fa-user"></i></div>
+      </div>
+      <div class="input-group input-group-icon">
+        <input type="text" name="PAY_2" placeholder="Repayment status in august">
+        <div class="input-icon"><i class="fa fa-user"></i></div>
+      </div>
+      <div class="input-group input-group-icon">
+        <input type="text" name="PAY_3" placeholder="Repayment status in july">
+        <div class="input-icon"><i class="fa fa-user"></i></div>
+      </div>
+      <div class="input-group input-group-icon">
+        <input type="text" name="PAY_4" placeholder="Repayment status in june">
+        <div class="input-icon"><i class="fa fa-user"></i></div>
+      </div>
+      <div class="input-group input-group-icon">
+        <input type="text" name="PAY_5" placeholder="Repayment status in may">
+        <div class="input-icon"><i class="fa fa-user"></i></div>
+      </div>
+      <div class="input-group input-group-icon">
+        <input type="text" name="PAY_6" placeholder="Repayment status in april">
+        <div class="input-icon"><i class="fa fa-user"></i></div>
+      </div>
+
+    </div>
+    
+    <button class="sendButton"> Send</button>
+  </form>
+
+  <h1> Prediction : {{ prediction_text }}</h1>
+</div>
+<ul class="bg-bubbles">
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+</ul>
+<!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+  <script  src="{{ url_for('static', filename='script.js') }}"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+  <script>
+//     $( document ).ready(function() {
+//     console.log( "ready!" );
+//     var LIMIT_BAL
+//     var BILL_AMT1
+//     var BILL_AMT2
+//     var BILL_AMT3
+//     var BILL_AMT4
+//     var BILL_AMT5
+//     var BILL_AMT6
+//     var PAY_AMT1
+//     var PAY_AMT2
+//     var PAY_AMT3
+//     var PAY_AMT4
+//     var PAY_AMT5
+//     var PAY_AMT6
+//     var PAY_1
+//     var PAY_2
+//     var PAY_3
+//     var PAY_4
+//     var PAY_5
+//     var PAY_6
+//       $('.sendButton').on('click', (e) => {
+//         e.preventDefault()
+//         console.log('clicked');
+//          LIMIT_BAL = $('.LIMIT_BAL').val()
+//          BILL_AMT1 = $('.BILL_AMT1').val()
+//          BILL_AMT2 = $('.BILL_AMT2').val()
+//          BILL_AMT3 = $('.BILL_AMT3').val()
+//          BILL_AMT4 = $('.BILL_AMT4').val()
+//          BILL_AMT5 = $('.BILL_AMT5').val()
+//          BILL_AMT6 = $('.BILL_AMT6').val()
+//          PAY_AMT1 = $('.PAY_AMT1').val()
+//          PAY_AMT2 = $('.PAY_AMT2').val()
+//          PAY_AMT3 = $('.PAY_AMT3').val()
+//          PAY_AMT4 = $('.PAY_AMT4').val()
+//          PAY_AMT5 = $('.PAY_AMT5').val()
+//          PAY_AMT6 = $('.PAY_AMT6').val()
+//          PAY_1 = $('.PAY_1').val()
+//          PAY_2 = $('.PAY_2').val()
+//          PAY_3 = $('.PAY_3').val()
+//          PAY_4 = $('.PAY_4').val()
+//          PAY_5 = $('.PAY_5').val()
+//          PAY_6 = $('.PAY_6').val()
+//          var dataToSend = {
+//         LIMIT_BAL,
+//         BILL_AMT1,
+//         BILL_AMT2,
+//         BILL_AMT3,
+//         BILL_AMT4,
+//         BILL_AMT5,
+//         BILL_AMT6,
+//         PAY_AMT1,
+//         PAY_AMT2,
+//         PAY_AMT3,
+//         PAY_AMT4,
+//         PAY_AMT5,
+//         PAY_AMT6,
+//         PAY_1,
+//         PAY_2,
+//         PAY_3,
+//         PAY_4,
+//         PAY_5,
+//         PAY_6,
+//       }
+
+//       var dataa = JSON.stringify({
+//   LIMIT_BAL: 300000,
+//   BILL_AMT1:27459,
+//   BILL_AMT2:34405,
+//   BILL_AMT3:3283,
+//   BILL_AMT4:3961,
+//   BILL_AMT5:24306,
+//   BILL_AMT6:22644,
+//   PAY_AMT1:8000,
+//   PAY_AMT2:0,
+//   PAY_AMT3:3961,
+//   PAY_AMT4:24306,
+//   PAY_AMT5:0,
+//   PAY_AMT6:7651,
+//   SEX:2,
+//   EDUCATION: 2,
+//   MARRIAGE: 1,
+//   AGE: 24,
+//   PAY_1: 0,
+//   PAY_2: 0,
+//   PAY_3: 2,
+//   PAY_4: -1,
+//   PAY_5: -1,
+//   PAY_6: 2
+// })
+
+//          $.ajax({
+//       type: 'POST',
+//       url: "http://localhost:5000/predict",
+//       data: dataa,
+//       dataType: 'JSON',
+//       success: function(data) {
+//         console.log('dazdazdazdazdadza');
+//             console.log(data)
+//       },
+//       error: async function(data) {console.log('hzeazeazeaze');
+//             data.then((dataa)=> {
+//               console.log(dataa);
+//             })
+//       },
+//     });
+//       })
+
+      
+//     });
+  </script>
+</body>
+</html>
